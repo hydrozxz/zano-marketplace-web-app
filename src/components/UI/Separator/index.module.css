@@ -1,0 +1,23 @@
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.separator{
+    border-top-width: initial;
+    border-right-width: initial;
+    border-left-width: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    width: 100%;
+    border-style: none none solid;
+    border-image: initial;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    padding: 0px;
+}

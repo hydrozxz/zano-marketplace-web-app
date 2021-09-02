@@ -1,0 +1,86 @@
+.footer {
+    width: 100%;
+    z-index: 5;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    background-color: #faf9f7;
+}
+
+.toolbarContent {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+}
+
+.disclamer {
+    font-size: 10pt;
+    line-height: 1.7rem;
+    text-align: right;
+}
+
+.title {
+    font-size: 15pt;
+    padding-top: 10px;
+    margin-bottom: -30px;
+}
+
+.companyInfoContainer {
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 47px;
+}
+
+.socialMediaBox {
+    display: flex;
+    padding: 10px 0px 10px 10px;
+}
+
+.socialMediaItem {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+.linkContainer {
+    display: flex;
+}
+.linkColumn {
+    flex-basis: 15.6rem;
+}
+.linkTitle {
+    font-weight: bold;
+}
+.link {
+    cursor: pointer;
+    width: fit-content;
+}
+.link:hover {
+    text-decoration: underline;
+}
+.logo {
+    display: inline;
+}
+.logoMobile {
+    display: none;
+}
+@media (max-width: 500px) {
+    .logo {
+        display: none;
+    }
+    .logoMobile {
+        display: inline;
+    }
+    .socialMediaBox {
+        padding: 0px 0px 10px 10px;
+    }
+}

@@ -1,0 +1,15 @@
+.container {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+.content {
+    margin: 0 auto;
+    max-width: 440px;
+}
+.opstext {
+    color: #e8e9eb;
+    font-size: 124px;
+    font-weight: 400;
+    letter-spacing: -5px;
+    line-height: 178px;
+}
