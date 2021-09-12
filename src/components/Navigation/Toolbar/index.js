@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
+import Input from '../../UI/Input';
+import Logo from './../../../../public/logo.svg';
 import styles from './index.module.css';
 
 const Toolbar = (props) => {
@@ -10,15 +13,11 @@ const Toolbar = (props) => {
                 <div className={styles.logoContent}>
                     <Link href="/">
                         <a>
-                            <div className={styles.logo}></div>
-                            <div className={styles.logoMobile}></div>
+                            <Image src={Logo} height={40} width={40} alt='' layout='fixed' />
                         </a>
                     </Link>
                 </div>
-                <div className={styles.searchRecipeInputBox}>
-                    <div className={styles.searchRecipeInput}>
-                    </div>
-                </div>
+                <Input placeholder="Search something" />
             </div>
         </header>
     );

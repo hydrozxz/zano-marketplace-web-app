@@ -1,10 +1,17 @@
+import React, { useState } from 'react';
 import { NextSeo } from 'next-seo';
-import Image from 'next/image';
+
+import { Card } from '../components/UI/Card';
+import Separator from '../components/UI/Separator';
+import Modal from '../components/UI/Modal';
+import Page from '../components/Layout/Page';
+
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+const Home = () => {
+  const [itemCardVisible, setItemCardVisible] = useState(false);
   return (
-    <div className={styles.container}>
+    <Page>
       <NextSeo
         title='Home'
         description='Zano Marketplace'
@@ -13,59 +20,57 @@ export default function Home() {
           description: 'Zano Marketplace'
         }}
       />
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Modal isOpen={itemCardVisible} onClose={() => setItemCardVisible(false)}>
+        <b style={{ fontSize: '14pt' }}>Nice quality Weed</b>
+        <Separator />
+        <div style={{ marginBottom: 20 }}>
+          <div><b>Location:</b> USA</div>
+          <div><b>Amount:</b> 10 Zanos</div>
+          <div><b>Contact:</b> Skype: some_skype, discord: some_user#01012</div>
+          <div><b>Expiration:</b> 1 days 3 hours</div>
+          <div><b>Comment:</b> Some nice comments about weed</div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <button className={styles.button}>
+          <span className={styles.innerButon}>
+            Proceed to wallet
           </span>
-        </a>
-      </footer>
-    </div>
+        </button>
+      </Modal>
+      <h1 className={styles.title}>
+        Welcome to Zano Marketplace Explorer
+      </h1>
+      <Separator />
+      <div className={styles.itemsContainer}>
+        <Card title='Nice quality Weed' style={{ margin: 20, cursor: 'pointer' }} onClick={() => setItemCardVisible(true)}>
+          <div><b>Location:</b> USA</div>
+          <div><b>Amount:</b> 10 Zanos</div>
+          <div><b>Contact:</b> Skype: some_skype, discord: some_user#01012</div>
+          <div><b>Expiration:</b> 1 days 3 hours</div>
+        </Card>
+
+        <Card title='T-shirt with Zano logo, made by Crypjunkie' style={{ margin: 20, cursor: 'pointer' }} onClick={() => setItemCardVisible(true)} >
+          <div><b>Location:</b> World Wide</div>
+          <div><b>Amount:</b> 3 Zanos</div>
+          <div><b>Contact:</b> Skype: some_skype, discord: some_user#01012</div>
+          <div><b>Expiration:</b> 5 days 3 hours</div>
+        </Card>
+
+        <Card title='Gaming Laptop latest gen' style={{ margin: 20, cursor: 'pointer' }} onClick={() => setItemCardVisible(true)}>
+          <div><b>Location:</b> World Wide</div>
+          <div><b>Amount:</b> 3 Zanos</div>
+          <div><b>Contact:</b> Skype: some_skype</div>
+          <div><b>Expiration:</b> 5 days 3 hours</div>
+        </Card>
+
+        <Card title='T-shirt with Zano logo, made by Crypjunkie' style={{ margin: 20, cursor: 'pointer' }} onClick={() => setItemCardVisible(true)}>
+          <div><b>Location:</b> World Wide</div>
+          <div><b>Amount:</b> 3 Zanos</div>
+          <div><b>Contact:</b> Skype: some_skype, discord: some_user#01012</div>
+          <div><b>Expiration:</b> 5 days 3 hours</div>
+        </Card>
+      </div>
+    </Page>
   )
 }
+
+export default Home;

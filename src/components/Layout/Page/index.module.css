@@ -1,0 +1,21 @@
+.layout {
+    width: 100%;
+    padding: 100px 50px 30px 50px;
+    background-color: #f0f2f5;
+}
+.content {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1400px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        padding: 80px 20px 30px 20px;
+    }
+    .content {
+        padding: 0px;
+    }
+}

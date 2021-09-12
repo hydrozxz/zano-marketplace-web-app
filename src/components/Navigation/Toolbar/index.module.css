@@ -18,7 +18,7 @@
 }
 .toolbarContent {
     display: flex;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -42,15 +42,9 @@
 
 .logoContent {
     cursor: pointer;
-    margin-left: 20px;
-    margin-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 150px;
-}
-.logo {
-    display: flex;
-}
-.logoMobile {
-    display: none;
 }
 
 .shortcutBtn {
@@ -60,16 +54,5 @@
 @media (max-width: 768px) {
     .logoContent {
         margin-left: 0px;
-    }
-    .logo {
-        display: none;
-    }
-    .logoMobile {
-        display: flex;
-    }
-}
-@media (max-width: 500px) {
-    .logoContent {
-        margin-right: 20px;
     }
 }
